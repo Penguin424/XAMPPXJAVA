@@ -13,10 +13,6 @@ public class Conexion
             Class.forName("com.mysql.jdbc.Driver");
 
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mensajes_app", "root","");
-            if(connection != null)
-            {
-                System.out.println("conexion exitosa");
-            }
         }
         catch(SQLException | ClassNotFoundException e)
         {
