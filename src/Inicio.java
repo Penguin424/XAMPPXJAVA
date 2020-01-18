@@ -1,6 +1,6 @@
-import java.sql.Connection;
 import java.util.Scanner;
 import com.MSJDB.MensajesService;
+import com.cnx.Conexion;
 
 public class Inicio
 {
@@ -8,8 +8,6 @@ public class Inicio
     {
 
         Scanner sc = new Scanner(System.in);
-
-        Conexion conexion = new Conexion();
 
         int opcion = 0;
 
