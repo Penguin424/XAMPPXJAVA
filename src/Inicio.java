@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import com.MSJDB.MensajesService;
+import com.URDB.UsuariosService;
 
 public class Inicio
 {
@@ -18,7 +19,8 @@ public class Inicio
             System.out.println(" 2.- listar Mensajes" );
             System.out.println(" 3.- Editar mensaje");
             System.out.println(" 4.- Eliminar mensaje");
-            System.out.println(" 5.- Salir");
+            System.out.println(" 5.- Crear usuario");
+            System.out.println(" 6.- Salir");
 
             //Leer opcion del UI
             System.out.println("\n Ingresa tu opcion: ");
@@ -38,12 +40,15 @@ public class Inicio
                 case 4:
                     MensajesService.borrarMensaje();
                     break;
+                case 5:
+                    UsuariosService.crearUsuario();
+                    break;
                 default:
                     break;
             }
 
         }
-        while (opcion != 5);
+        while (opcion != 6);
 
     }
 }
