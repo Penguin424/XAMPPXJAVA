@@ -6,10 +6,13 @@ import java.sql.SQLException;
 
 public class Conexion
 {
-    public Connection get_connection()
+
+    private static Connection connection = null;
+
+    private Conexion()
     {
 
-        Connection connection = null;
+
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
@@ -21,6 +24,18 @@ public class Conexion
             System.out.println(e);
         }
 
+
+    }
+
+    public static Connection get_connection()
+    {
+
+        if(connection == null)
+        {
+            new Conexion();
+        }
+
         return connection;
+
     }
 }

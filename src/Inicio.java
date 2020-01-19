@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import com.MSJDB.MensajesService;
-import com.cnx.Conexion;
 
 public class Inicio
 {
